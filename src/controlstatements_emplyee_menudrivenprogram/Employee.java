@@ -10,19 +10,20 @@ package controlstatements_emplyee_menudrivenprogram;
  * @author asus
  */
 public class Employee {
-      private String empName;
+    private String empName;
     private String empPosition;
     private int empID;
     private int appraisalScore;
     private int empExpYr;
     private int empGrade;
-     public Employee(String empName, int empID, int appraisalScore, int empExpYr, int empGrade, String position){
+   
+    public Employee(String empName, int empID, int appraisalScore, int empExpYr, int empGrade){
         this.empName = empName;
         this.empID = empID;
         this.appraisalScore = appraisalScore;
         this.empExpYr = empExpYr;
         this.empGrade = empGrade;
-       
+        this.empPosition = checkPosition(empGrade);
         checkPosition(empGrade);
    
 }
@@ -67,7 +68,7 @@ public class Employee {
    
      
 public static String checkPosition(int empGrade){
-      String position="";
+    String position="";
     switch(empGrade){
     
     case 1 :
